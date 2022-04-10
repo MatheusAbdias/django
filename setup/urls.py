@@ -1,12 +1,12 @@
-from django.contrib import admin
-from django.urls import path, include
-from rest_framework import routers
 from clientes.views import ClientesViewSet
+from django.contrib import admin
+from django.urls import include, path
+from rest_framework import routers
 
 router = routers.DefaultRouter()
-router.register('clientes', ClientesViewSet)
+router.register("clientes", ClientesViewSet)
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('', include(router.urls)),
+    path("admin/", admin.site.urls),
+    path("", include(router.urls)),
 ]

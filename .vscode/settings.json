@@ -1,0 +1,39 @@
+{
+    "editor.formatOnSave": true,
+    "python.formatting.provider": "black",
+    "editor.tabSize": 4,
+    "python.linting.enabled": true,
+    "python.linting.flake8Enabled": true,
+    "python.linting.pylintEnabled": true,
+    "python.linting.pylintArgs": [
+        "--load-plugins=pylint_django",
+        "--disable=django-not-configured",
+        "--django-settings-module=cognuro.settings"
+    ],
+    "python.analysis.extraPaths": [
+        "./src"
+    ],
+    "python.formatting.blackArgs": [
+        "--line-length=79",
+        "--experimental-string-processing"
+    ],
+    "python.sortImports.args": [
+        "--profile",
+        "black",
+        "--line-length=79"
+    ],
+    "[python]": {
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": true
+        }
+    },
+    "python.testing.unittestArgs": [
+        "-v",
+        "-s",
+        "./src",
+        "-p",
+        "test_*.py"
+    ],
+    "python.testing.pytestEnabled": false,
+    "python.testing.unittestEnabled": true
+}
