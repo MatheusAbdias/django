@@ -3,7 +3,12 @@ from re import search
 from rest_framework import serializers
 
 from clientes.models import Cliente
-from clientes.validators import *
+from clientes.validators import (
+    validate_celular,
+    validate_nome,
+    validate_rg,
+    validete_cpf,
+)
 
 
 class ClienteSerializer(serializers.ModelSerializer):
